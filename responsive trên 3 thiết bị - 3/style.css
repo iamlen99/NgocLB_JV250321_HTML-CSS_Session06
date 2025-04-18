@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 25px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container div {
+  background-color: #9f4a4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container header {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.container header h1 {
+  color: #9f4a4b;
+  font-size: 35px;
+}
+.container header .nav {
+  flex-grow: 1;
+}
+
+.container .main {
+  height: 300px;
+  width: calc((100% - 2 * 20px) / 3 * 2 + 20px);
+}
+
+.container .aside {
+  width: calc((100% - 2 * 20px) / 3);
+}
+
+.container .column {
+  width: calc((100% - 2 * 20px) / 3);
+  height: 100px;
+}
+
+.btn {
+  padding: 6px 9px;
+  background-color: #9f4a4b;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    gap: 15px;
+  }
+
+  .container .main {
+    height: 200px;
+    width: 100%;
+  }
+
+  .container .aside {
+    height: 100px;
+    width: 100%;
+  }
+
+  .container .column {
+    width: calc((100% - 15px) / 2);
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container header {
+    display: block;
+    position: relative;
+  }
+
+  .container header .nav {
+    height: 100px;
+    margin-top: 5px;
+  }
+
+  .container {
+    gap: 10px;
+  }
+
+  .container .main {
+    margin: 0 10px;
+  }
+
+  .container .aside {
+    margin: 0 10px;
+  }
+
+  .container .column {
+    width: 100%;
+    margin: 0 10px;
+  }
+
+  .btn {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+  }
+}
